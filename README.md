@@ -37,3 +37,5 @@ To permanently fix this, choose Default instead of Properties then Disable Quick
 My miner is not on the list. This project is a work in progress. If you do not see your miner of choice, please create an issue here and I will quickly add support for it.
 
 # Work in Progress
+
+Support for 
