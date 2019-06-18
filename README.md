@@ -38,4 +38,4 @@ My miner is not on the list. This project is a work in progress. If you do not s
 
 # Work in Progress
 
-Support for Phoenix Miner, Claymore, SRBMiner.
+Support for Phoenix Miner, Claymore, SRBMiner, SGMiner, Bminer
