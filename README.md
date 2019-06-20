@@ -24,7 +24,7 @@ SRBMiner = 3
 SGMiner = 4 
 BMiner = 5
 
-# Command Line 
+# Run in Command Line 
 
 First Parameter miner number
 Phoenix Miner = 1 Claymore = 2, SRBMiner = 3, SGMiner = 4, BMiner = 5
@@ -38,7 +38,7 @@ Third Parameter Zilliqa Address (new or old format)
 Example:
 zil_switcher.exe 1 miner.bat 0xe511b07b68681d4501665De40cf6A734f05da94f
 
-# Not Command Line
+# Run outside of Command Line
 
 1) Download Zilminer, Download your other miner (let's say Claymore), Download Zilliqa-Switcher
 2) Extract all files from all three downloaded packages in the same folder.
