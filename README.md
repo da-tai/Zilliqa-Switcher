@@ -41,8 +41,11 @@ Fourth Parameter Miner Name
 zil_windows
 
 Example #1: zil_switcher.exe 1 miner.bat 0xe511b07b68681d4501665De40cf6A734f05da94f
+
 Example #2: zil_switcher.exe 2 EthDcrMiner64.exe zil1u5gmq7mgdqw52qtxthjqea48xnc9m22067k4gf
+
 Example #3: zil_switcher.exe 2 EthDcrMiner64.exe zil1u5gmq7mgdqw52qtxthjqea48xnc9m22067k4gf miner1
+
 Example #4: zil_switcher.exe 1 start.bat 0xe511b07b68681d4501665De40cf6A734f05da94f win_miner
 
 # Run outside of Command Line
