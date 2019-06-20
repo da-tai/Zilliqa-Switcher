@@ -23,11 +23,12 @@ Claymore = 2
 SRBMiner = 3 
 SGMiner = 4 
 BMiner = 5
+GMiner = 6
 
 # Run in Command Line 
 
 First Parameter miner number
-Phoenix Miner = 1 Claymore = 2, SRBMiner = 3, SGMiner = 4, BMiner = 5
+Phoenix Miner = 1 Claymore = 2, SRBMiner = 3, SGMiner = 4, BMiner = 5, GMiner = 6
 
 Second Parameter exe or bat file name
 PhoenixMiner.exe
