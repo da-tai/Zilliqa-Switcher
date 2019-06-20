@@ -59,6 +59,14 @@ To permanently fix this, choose Default instead of Properties then Disable Quick
 
 My miner is not on the list. This project is a work in progress. If you do not see your miner of choice, please create an issue here and I will quickly add support for it.
 
+Can I Donate?
+Sure
+
+BTC: 347DrMsEhPaxVQjvrYFRoiAHb5NQoNGV7R
+ETH: 0x374817E3F8adDBa6A03B7872f7CBeD0ce8C6AE8E
+ZIL: 0xe511b07b68681d4501665De40cf6A734f05da94f
+
+
 # Work in Progress
 
 Support for Phoenix Miner, Claymore, SRBMiner, SGMiner, Bminer
