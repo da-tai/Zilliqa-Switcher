@@ -28,6 +28,7 @@ GMiner = 6
 # Run in Command Line 
 
 There are 3 parameters needed for this to work and an optional 4th.
+
 First Parameter miner number
 Phoenix Miner = 1 Claymore = 2, SRBMiner = 3, SGMiner = 4, BMiner = 5, GMiner = 6
 
