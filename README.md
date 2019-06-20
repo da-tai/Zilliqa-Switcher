@@ -36,8 +36,8 @@ PhoenixMiner.exe
 Third Parameter Zilliqa Address (new or old format)
 0xe511b07b68681d4501665De40cf6A734f05da94f
 
-Example:
-zil_switcher.exe 1 miner.bat 0xe511b07b68681d4501665De40cf6A734f05da94f
+Example #1: zil_switcher.exe 1 miner.bat 0xe511b07b68681d4501665De40cf6A734f05da94f
+Example #2: zil_switcher.exe 2 EthDcrMiner64.exe zil1u5gmq7mgdqw52qtxthjqea48xnc9m22067k4gf
 
 # Run outside of Command Line
 
