@@ -70,6 +70,9 @@ Example #4: zil_switcher.exe 1 start.bat 0xe511b07b68681d4501665De40cf6A734f05da
 
 # Errors  + Solutions
 
+I use HIVEOS not Windows.
+Message @kidkid1 on telegram
+
 If you get an error, please ensure you answered each option correctly. Else, leave an issue here with screenshots and step by step instructions on how you came about the error.
 
 My Command Prompt screen no longer crashed/stopped doing anything. This is an issue with Command Prompt. Right click at the top of the command prompt, choose Properties, Disable Quick Edit.
