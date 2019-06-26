@@ -24,13 +24,20 @@ SRBMiner = 3
 SGMiner = 4 
 BMiner = 5
 GMiner = 6
+NiceHashMinerLegacy = 7
+CCMiner = 8 
+TT-Miner = 9 
+ewbf_144 = 10 
+NBminer = 11 
+Team Red Miner = 12 
+Xmr-Stak = 13
 
 # Run in Command Line 
 
 There are 3 parameters needed for this to work and an optional 4th.
 
 First Parameter miner number
-Phoenix Miner = 1 Claymore = 2, SRBMiner = 3, SGMiner = 4, BMiner = 5, GMiner = 6
+Phoenix Miner = 1 Claymore = 2, SRBMiner = 3, SGMiner = 4, BMiner = 5, GMiner = 6, NiceHash Miner Legacy = 7, CCMiner = 8, TT-Miner = 9, ewbf_144 = 10, NBminer = 11, Team Red Miner = 12, Xmr-Stak = 13
 
 Second Parameter exe or bat file name
 PhoenixMiner.exe
@@ -82,4 +89,4 @@ ZIL: 0xe511b07b68681d4501665De40cf6A734f05da94f
 
 # Work in Progress
 
-Support for Phoenix Miner, Claymore, SRBMiner, SGMiner, Bminer
+Support for Phoenix Miner, Claymore, SRBMiner, SGMiner, Bminer, Gminer, NiceHash Miner Legacy, CCMiner , TT-Miner , ewbf_144 , NBminer , Team Red Miner , Xmr-Stak 
