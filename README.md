@@ -18,6 +18,7 @@ Instead of your miners crashing, I offer you a solution to mine any other coin w
 # Instructions
 
 Miner Numbers :
+Custom Scripts = 0
 Phoenix Miner = 1 
 Claymore = 2 
 SRBMiner = 3 
@@ -34,27 +35,42 @@ Xmr-Stak = 13
 
 # Run in Command Line 
 
-There are 3 parameters needed for this to work and an optional 4th.
+-m or --miner    This is required to let the script miner you would like to dual mine Zilliqa with. Below are the parameters to choose from. Example, -m 15 uses LolMiner + Zil.
 
-First Parameter miner number
-Phoenix Miner = 1 Claymore = 2, SRBMiner = 3, SGMiner = 4, BMiner = 5, GMiner = 6, NiceHash Miner Legacy = 7, CCMiner = 8, TT-Miner = 9, ewbf_144 = 10, NBminer = 11, Team Red Miner = 12, Xmr-Stak = 13
+Custom Script = 0 ,Phoenix Miner = 1 Claymore = 2, SRBMiner = 3, SGMiner = 4, BMiner = 5, GMiner = 6, NiceHash Miner Legacy = 7, CCMiner = 8, TT-Miner = 9, ewbf_144 = 10, NBminer = 11, Team Red Miner = 12, Xmr-Stak = 13, MinerStat = 14, LolMiner = 15, NiceHash Miner = 16, T-Rex = 17
 
-Second Parameter exe or bat file name
-PhoenixMiner.exe
+-r or --run   This is required to start your Miner (chosen with -m). Not required for custom scripts option. Either use an exe or bat. Example -r PhoenixMiner.exe  or -r start.bat
 
-Third Parameter Zilliqa Address (new or old format)
-0xe511b07b68681d4501665De40cf6A734f05da94f
+-a or --address    This is required to mine Zilliqa to your correct address. New or old format works. Example  -a 0xe511b07b68681d4501665De40cf6A734f05da94f
 
-Fourth Parameter Miner Name
-zil_windows
+-w or --worker   This is your miner name for mining Zilliqa. This is optional. If left empty, it uses your PC Name
 
-Example #1: zil_switcher.exe 1 miner.bat 0xe511b07b68681d4501665De40cf6A734f05da94f
 
-Example #2: zil_switcher.exe 2 EthDcrMiner64.exe zil1u5gmq7mgdqw52qtxthjqea48xnc9m22067k4gf
+Custom Script Explanation
 
-Example #3: zil_switcher.exe 2 EthDcrMiner64.exe zil1u5gmq7mgdqw52qtxthjqea48xnc9m22067k4gf miner1
+This is for users that would like to use their own scripts to open and close their miner of choice.
 
-Example #4: zil_switcher.exe 1 start.bat 0xe511b07b68681d4501665De40cf6A734f05da94f win_miner
+-r or --run   Is not to be used for this.
+
+-s or --start   Used to stop your miner. This should be a bat file.  Example  -s stop.bat
+
+-e or --end    Used to start your miner. Example -e ewbf_144.exe  or --end start.bat
+
+But... I used the old format to run this script
+
+We have you covered, we have added backward compatibility. When you update to the newest version, you old scripts should work (PM @kidkid1 if you have issues or PM me here)
+
+# Examples
+
+Example #1: zil_switcher.exe  -m 1 -r miner.bat  -a 0xe511b07b68681d4501665De40cf6A734f05da94f
+
+Example #2: zil_switcher.exe -m 2 EthDcrMiner64.exe  -a zil1u5gmq7mgdqw52qtxthjqea48xnc9m22067k4gf
+
+Example #3: zil_switcher.exe -m 2 EthDcrMiner64.exe -a zil1u5gmq7mgdqw52qtxthjqea48xnc9m22067k4gf -w miner1
+
+Example #4: zil_switcher.exe -m 1  -r start.bat -a 0xe511b07b68681d4501665De40cf6A734f05da94f -w win_miner
+
+Example #5: zil_switcher.exe -m 0 -a 0xe511b07b68681d4501665De40cf6A734f05da94f -s stop.bat -e start.bat
 
 # Run outside of Command Line
 
@@ -68,28 +84,77 @@ Example #4: zil_switcher.exe 1 start.bat 0xe511b07b68681d4501665De40cf6A734f05da
 8) Forth option, enter your Zilliqa Address. This can be the old formart Zil address or New Format Zil Address
 9) That's it :)
 
-# Errors  + Solutions
+# For Awesome Miner
 
-I use HIVEOS not Windows.
-Message @kidkid1 on telegram
+First, be sure that API is activated in Awesomeminer.
+ 
+Screenshot
 
-If you get an error, please ensure you answered each option correctly. Else, leave an issue here with screenshots and step by step instructions on how you came about the error.
+https://prnt.sc/pmgzdn
+ 
+Zil_Switcher start commandline:
+ 
+Zil_Switcher.exe -m 0 --wallet ******** --worker ****** -s stop.bat -e start.bat
+ 
+Wallet and Worker not really needed, but you need it that the Zilswitcher start.
+ 
+ 
+Now the 2 scripts to stop the main miner and start the Zilminer
+ 
+start.bat
+ 
+curl -i -d POST http://[IP_AWESOMEMINER_MAIN_PC]:17790/api/miners/[MINERID]?action=stop       #stop main miner in Awesomeminer(miniZ,Gminer,lolminer etc)
+ 
+curl -i -d POST http://[IP_AWESOMEMINER_MAIN_PC]:17790/api/miners/[MINERID]?action=start #start zilliqa miner in Awesomeminer  
+ 
+stop.bat
+ 
+curl -i -d POST http://[IP_AWESOMEMINER_MAIN_PC]:17790/api/miners/[MINERID]?action=stop   #stop zilliqa miner in Awesomeminer  
+ 
+curl -i -d POST http://[IP_AWESOMEMINER_MAIN_PC]:17790/api/miners/[MINERID]?action=start #start main miner in Awesomeminer(miniZ,Gminer,lolminer etc)
 
-My Command Prompt screen no longer crashed/stopped doing anything. This is an issue with Command Prompt. Right click at the top of the command prompt, choose Properties, Disable Quick Edit.
-To permanently fix this, choose Default instead of Properties then Disable Quick Edit.
+ 
+MinerID can found in Awesomeminer summary tab
 
-My miner is not on the list. This project is a work in progress. If you do not see your miner of choice, please create an issue here and I will quickly add support for it.
+# Screenshot
 
-Can I Donate?
+https://prnt.sc/pmgzi2
+
+Example:
+ 
+start.bat curl -i -d POST http://192.168.2.113:17790/api/miners/37?action=stop curl -i -d POST http://192.168.2.113:17790/api/miners/48?action=start
+ 
+stop.bat curl -i -d POST http://192.168.2.113:17790/api/miners/48?action=stop curl -i -d POST http://192.168.2.113:17790/api/miners/37?action=start
+ 
+Another way where you only need one miner in Awesomemine, is to change the template via API.  If needed i make a documentation.
+ 
+I am sure, now there are so many ways. Find your own way or ask me Smiley
+ 
+If your windows doesn´t have curl, then you find it online as portable version.
+
+Documentation Created by sxemini https://bitcointalk.org/index.php?action=profile;u=2021959
+
+
+# FAQ
+
+I use HIVE OS.
+
+Message @kidkid1 in telegram for scripts
+
+My Command Prompt screen no longer crashed/stopped doing anything.
+
+This is an issue with Command Prompt. Right click at the top of the command prompt, choose Properties, Disable Quick Edit. To permanently fix this, choose Default instead of Properties then Disable Quick Edit.
+
+My miner is not on the list.
+This project is a work in progress. If you do not see your miner of choice, please create an issue here and I will quickly add support for it.
+
+Are there any fees to use this?
+There are no fees attached.
+
+Can I donate?
 Sure
 
 BTC: 347DrMsEhPaxVQjvrYFRoiAHb5NQoNGV7R
-
 ETH: 0x374817E3F8adDBa6A03B7872f7CBeD0ce8C6AE8E
-
 ZIL: 0xe511b07b68681d4501665De40cf6A734f05da94f
 
-
-# Work in Progress
-
-Support for Phoenix Miner, Claymore, SRBMiner, SGMiner, Bminer, Gminer, NiceHash Miner Legacy, CCMiner , TT-Miner , ewbf_144 , NBminer , Team Red Miner , Xmr-Stak 
