@@ -116,7 +116,7 @@ curl -i -d POST http://[IP_AWESOMEMINER_MAIN_PC]:17790/api/miners/[MINERID]?acti
  
 MinerID can found in Awesomeminer summary tab
 
-# Screenshot
+Screenshot
 
 https://prnt.sc/pmgzi2
 
